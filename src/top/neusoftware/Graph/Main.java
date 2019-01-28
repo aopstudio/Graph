@@ -9,9 +9,12 @@ public class Main {
 		m[1][0]=1;
 		m[1][2]=1;
 		m[2][1]=1;
-		String graph=GenerateGraph.generateFromMatrix(m);
+		//String graph=GenerateGraph.generateFromMatrix(m);
+		ListGraph lg=new ListGraph(m);
+		lg.print();
+		String graph=GenerateGraph.generateFromList(lg);
 		String html=GenerateHTML.Generate(graph);
-		//System.out.print(html);
+		System.out.print(graph);
 		try {
 			WriteFile.write(html);
 		} catch (IOException e) {
