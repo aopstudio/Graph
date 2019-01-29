@@ -1,6 +1,6 @@
 package top.neusoftware.Graph;
 
 public class VNode {
-	int data;          // 顶点信息
-    ENode firstEdge;    // 指向第一条依附该顶点的弧
+	String data;          // 椤剁偣淇℃伅
+    ENode firstEdge;    // 鎸囧悜绗竴鏉′緷闄勮椤剁偣鐨勫姬
 }

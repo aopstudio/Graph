@@ -11,9 +11,9 @@ public class GenerateHTML {
 				"        <script src=\"https://cdn.bootcss.com/jquery/3.3.1/jquery.js\"></script>\r\n" + 
 				"    </head>\r\n" + 
 				"    <body>\r\n" + 
-				"        <p id=\"messages_center\">\r\n" + 
+				"        <center id=\"messages_center\">\r\n" + 
 				"    \r\n" + 
-				"        </p>\r\n" + 
+				"        </center>\r\n" + 
 				"        <script type=\"text/vnd.graphviz\" id=\"view_div\">"+
 				graph +
 				"</script>   \r\n" + 

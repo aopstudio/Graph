@@ -12,7 +12,7 @@ public class WriteFile {
 		}
 		PrintStream printStream = null ;
 		try {
-            printStream= new PrintStream(new FileOutputStream(file));//Â·¾¶Ä¬ÈÏÔÚÏîÄ¿¸ùÄ¿Â¼ÏÂ
+            printStream= new PrintStream(new FileOutputStream(file));//è·¯å¾„é»˜è®¤åœ¨é¡¹ç›®æ ¹ç›®å½•ä¸‹
            } catch (FileNotFoundException e) {
                e.printStackTrace();
            } 

@@ -1,35 +1,42 @@
 package top.neusoftware.Graph;
 
-import java.util.ArrayList;
 
 
 public class GenerateGraph {
-	public static String generateFromMatrix(int[][] m) {	//´ÓÁÚ½Ó¾ØÕó²úÉúÍ¼
-		int size=m.length;
+	public static String generateFromMatrix(MatrixGraph mg) {	//ä»é‚»æ¥çŸ©é˜µäº§ç”Ÿå›¾
+		int[][] edges=mg.getEdges();
+		String[] vertexes=mg.getVertexes();
+		int size=edges.length;
 		StringBuilder graph=new StringBuilder("graph g {");
-		for(int i=0;i<size;i++) {
+		for(int i=0;i<size;i++) {	//è¯»å–é¡¶ç‚¹çš„ä¿¡æ¯
+			graph.append(i+"[label=\""+vertexes[i]+"\"];");
+		}
+		for(int i=0;i<size;i++) {	//è¯»å–è¾¹çš„ä¿¡æ¯
 			for(int j=i;j<size;j++) {
-				if(m[i][j]!=0) {	//Á½ÕßÏàÁÚ
-					graph.append(i+"--"+j+";");
+				if(edges[i][j]!=0) {	//ä¸¤è€…ç›¸é‚»
+					graph.append(i+"--"+j+"[label=\""+edges[i][j]+"\"];");
 				}
 			}
 		}
 		graph.append("}");
 		return graph.toString();
 	}
-	public static String generateFromList(ListGraph lg) {	//´ÓÁÚ½Ó±í²úÉúÍ¼
+	public static String generateFromList(ListGraph lg) {	//ä»é‚»æ¥è¡¨äº§ç”Ÿå›¾
 		VNode[] m=lg.getGraph();
-		ENode edge;		//¶ÁÈ¡³ö±ßµÄĞÅÏ¢´æÓÚ´Ë±äÁ¿
-		VNode vertex;	//¶ÁÈ¡³ö½áµãµÄĞÅÏ¢´æÓÚ´Ë±äÁ¿
+		ENode edge;		//è¯»å–å‡ºè¾¹çš„ä¿¡æ¯å­˜äºæ­¤å˜é‡
+		VNode vertex;	//è¯»å–å‡ºç»“ç‚¹çš„ä¿¡æ¯å­˜äºæ­¤å˜é‡
 		int size=m.length;
 		StringBuilder graph=new StringBuilder("graph g {");
-		for(int i=0;i<size;i++) {
+		for(int i=0;i<size;i++) {	//è¯»å–é¡¶ç‚¹ä¿¡æ¯
+			graph.append(i+"[label=\""+m[i].data+"\"];");
+		}
+		for(int i=0;i<size;i++) {	//è¯»å–è¾¹çš„ä¿¡æ¯
 			vertex=m[i];
 			edge=vertex.firstEdge;
 			while(edge!=null) {
 				int j=edge.ivex;
 				if(j>=i) {
-					graph.append(i+"--"+edge.ivex+";");
+					graph.append(i+"--"+edge.ivex+"[label=\""+edge.degree+"\"]"+";");
 				}
 				edge=edge.nextEdge;
 			}

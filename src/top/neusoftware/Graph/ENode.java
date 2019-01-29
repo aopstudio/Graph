@@ -2,6 +2,7 @@ package top.neusoftware.Graph;
 
 
 public class ENode {
-	int ivex;       // ¸Ã±ßËùÖ¸ÏòµÄ¶¥µãµÄÎ»ÖÃ
-    ENode nextEdge; // Ö¸ÏòÏÂÒ»Ìõ»¡µÄÖ¸Õë
+	int ivex;       // è¯¥è¾¹æ‰€æŒ‡å‘çš„é¡¶ç‚¹çš„ä½ç½®
+	int degree;		//è¯¥è¾¹çš„åº¦
+    ENode nextEdge; // æŒ‡å‘ä¸‹ä¸€æ¡å¼§çš„æŒ‡é’ˆ
 }
