@@ -7,3 +7,5 @@
 * [Viz.js](https://github.com/mdaines/viz.js/)：以Graphviz为基础，能够在网页上实现Graphviz的功能。本程序最主要的依赖工具。
 ## 实现机制
 ![机制](机制.png)
+## 生成文件的位置
+D:/graph.html
