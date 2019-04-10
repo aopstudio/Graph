@@ -7,7 +7,7 @@ public class GenerateHTML {
 				"    <head>\r\n" + 
 				"        <meta charset=\"UTF-8\">\r\n" + 
 				"        <title>graph</title>\r\n" + 
-				"        <script src=\"https://cdn.bootcss.com/viz.js/1.8.0/viz.js\"></script>\r\n" + 
+				"        <script src=\"https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js\"></script>\r\n" + 
 				"        <script src=\"https://cdn.bootcss.com/jquery/3.3.1/jquery.js\"></script>\r\n" + 
 				"    </head>\r\n" + 
 				"    <body>\r\n" + 
