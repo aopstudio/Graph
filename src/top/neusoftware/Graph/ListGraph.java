@@ -14,7 +14,7 @@ public class ListGraph {
     		v.setData(i+"");	//设置结点数据为结点的编号
     		v.setFirstEdge(new ENode());
     		for(int j=0;j<size;j++) {
-    			if(m[i][j]!=Integer.MAX_VALUE) {	//j和i相邻
+    			if(m[i][j]!=Integer.MAX_VALUE&&m[i][j]!=0) {	//j和i相邻且不相等
 					ENode e=v.getFirstEdge();	
 					while(e.getNextEdge()!=null) {
 						e=e.getNextEdge();	//找到最后那条边
@@ -34,7 +34,7 @@ public class ListGraph {
     		v.setData(vertexes[i]);	//设置结点数据为结点的编号
     		v.setFirstEdge(new ENode());	//头结点，不保存数据，这样就不需要判断v.firstEdge是否为空
     		for(int j=0;j<size;j++) {
-    			if(edges[i][j]!=Integer.MAX_VALUE) {	//j和i相邻
+    			if(edges[i][j]!=Integer.MAX_VALUE&&edges[i][j]!=0) {	//j和i相邻且不相等
     				ENode e=v.getFirstEdge();
 					while(e.getNextEdge()!=null) {
 						e=e.getNextEdge();	//找到最后那条边
@@ -56,7 +56,7 @@ public class ListGraph {
     		v.setData(vertexes[i]);	//设置结点数据为结点的编号
     		v.setFirstEdge(new ENode());	//头结点，不保存数据，这样就不需要判断v.firstEdge是否为空，如下方注释的操作
     		for(int j=0;j<size;j++) {
-    			if(edges[i][j]!=Integer.MAX_VALUE) {	//j和i相邻
+    			if(edges[i][j]!=Integer.MAX_VALUE&&edges[i][j]!=0) {	//j和i相邻且不相等
     				/*if(v.firstEdge==null) {		//如果i没有边
     					v.firstEdge=new ENode();	//添加i的新边
     					v.firstEdge.ivex=j;

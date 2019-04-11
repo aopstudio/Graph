@@ -18,7 +18,21 @@ public class WriteFile {
            } 
 
 		printStream.println(html); 
-		printStream.close();
+	    System.out.println("Done");
+	}
+	public static void writeShortest(String html) throws IOException {
+		File file =new File("D:/shortestPath.html");
+		if(!file.exists()){
+			file.createNewFile();
+		}
+		PrintStream printStream = null ;
+		try {
+            printStream= new PrintStream(new FileOutputStream(file));//路径默认在项目根目录下
+           } catch (FileNotFoundException e) {
+               e.printStackTrace();
+           } 
+
+		printStream.println(html); 
 	    System.out.println("Done");
 	}
 }
