@@ -19,7 +19,7 @@ public class Main {
 		//String graph=GenerateGraph.generateFromMatrix(m);
 		ListGraph lg=new ListGraph(m,nodes);
 		lg.print();
-		String graph=mg.generateDG();
+		String graph=lg.generateDG();
 		String html=GenerateHTML.Generate(graph);
 		System.out.print(graph);
 		try {

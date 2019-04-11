@@ -122,7 +122,7 @@ public class ListGraph {
 		graph.append("}");
 		return graph.toString();
 	}
-    public String generateDGFromList() {	//从邻接表产生有向图
+    public String generateDG() {	//从邻接表产生有向图
 		ENode edge;		//读取出边的信息存于此变量
 		VNode vertex;	//读取出结点的信息存于此变量
 		int size=mVexs.length;
