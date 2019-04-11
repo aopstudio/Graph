@@ -46,7 +46,7 @@ public class MatrixGraph {
 		graph.append("}");
 		return graph.toString();
 	}
-	public int[][] shortestPath(int start) {
+	public int[][] shortestPath(int start) {	//使用迪杰斯特拉算法得到最短路径，返回两个一维数组，prev代表前驱结点，dist代表最短路径
 		int[] prev=new int[vertexes.length];	//最短路径上的前驱结点
 		int[] dist=new int[vertexes.length];	//最短路径的长度
 		// flag[i]=true表示"顶点start"到"顶点i"的最短路径已成功获取

@@ -141,4 +141,80 @@ public class ListGraph {
 		graph.append("}");
 		return graph.toString();
 	}
+    public int[][] shortestPath(int start) {
+    	int[] prev=new int[mVexs.length];	//最短路径上的前驱结点
+		int[] dist=new int[mVexs.length];	//最短路径的长度
+		boolean[] flag = new boolean[mVexs.length];
+    	VNode vertex=mVexs[start];
+    	ENode edge=vertex.getFirstEdge().getNextEdge();
+	    // 初始化
+    	for (int i = 0; i < mVexs.length; i++) {
+	        flag[i] = false;     
+	        prev[i] = start;		
+	        dist[i] = Integer.MAX_VALUE; 
+	    }
+    	//首先读入与出发点直接邻接的边信息并设置为暂定最短路径
+		while(edge!=null) {
+			dist[edge.getIvex()]=edge.getDegree();
+			edge=edge.getNextEdge();
+		}
+	    // 对出发点自身进行初始化
+	    flag[start] = true;
+	    dist[start]=0;
+	    // 遍历mVexs.length-1次；每次找出一个顶点的最短路径
+	    int k=0;
+	    for (int i = 1; i < mVexs.length; i++) {
+	    	int min = Integer.MAX_VALUE;
+	    	for (int j = 0; j < mVexs.length; j++) {
+	            if (flag[j]==false && dist[j]<min) {
+	                min = dist[j];
+	                k = j;
+	            }
+	        }
+	    	// 标记"顶点k"为已经获取到最短路径
+	        flag[k] = true;
+	        // 修正当前最短路径和前驱顶点
+	        // 即，当已经"顶点k的最短路径"之后，更新"未获取最短路径的顶点的暂定最短路径和前驱顶点"
+	        edge=mVexs[k].getFirstEdge().getNextEdge();
+	        while(edge!=null) {
+	        	int tmp = min + edge.getDegree();	
+	        	int j=edge.getIvex();	//邻接的结点编号
+	        	if (flag[j]==false && (tmp<dist[j]) ) {	
+	                dist[j] = tmp;
+	                prev[j] = k;
+	            }
+	        	edge=edge.getNextEdge();
+			}
+	    }
+	    int[][] shortest=new int[2][mVexs.length];
+	    shortest[0]=prev;
+	    shortest[1]=dist;
+	    return shortest;
+    }
+    public String printShortestPath(int start,int terminate) {	//得到表示出最短路径的dot语言代码
+		int[][] shortest=shortestPath(start);
+		int[] prev=shortest[0];
+		int[] dist=shortest[1];
+		int size=mVexs.length;
+		StringBuilder graph=new StringBuilder("digraph g {");
+		graph.append("dist[label=\"最短距离为"+dist[terminate]+"\" shape=\"plain\"];");
+		
+	    int l=terminate;
+	    while(l!=start) {	//从后往前添加边信息
+	    	int degree=Integer.MAX_VALUE;	//存放边的长度
+	    	ENode edge=mVexs[prev[l]].getFirstEdge().getNextEdge();
+	    	while(edge!=null) {
+	    		if(edge.getIvex()==l) {	//找到了该边经过的结点
+	    			degree=edge.getDegree();	//设置该边的度
+	    		}
+	    		edge=edge.getNextEdge();
+	    	}
+	    	graph.append(l+"[label=\""+mVexs[l].getData()+"\"];");
+	    	graph.append(prev[l]+"->"+l+"[label=\""+degree+"\"];");
+	    	l=prev[l];
+	    }
+	    graph.append(l+"[label=\""+mVexs[l].getData()+"\"];");
+	    graph.append("}");
+	    return graph.toString();
+	}
 }
