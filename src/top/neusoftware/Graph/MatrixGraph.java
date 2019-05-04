@@ -66,7 +66,7 @@ public class MatrixGraph {
 	        // 即，在未获取最短路径的顶点中，找到离start最近的顶点(k)。
 	        int min = Integer.MAX_VALUE;
 	        for (int j = 0; j < vertexes.length; j++) {
-	            if (flag[j]==false && dist[j]<min) {
+	            if (!flag[j] && dist[j]<min) {
 	                min = dist[j];
 	                k = j;
 	            }
