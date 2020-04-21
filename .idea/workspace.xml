@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39689007-f519-4b27-a0bd-33cecf768ecb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/Graph/ENode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/Graph/ENode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/Graph/GenerateHTML.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/Graph/GenerateHTML.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/Graph/ListGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/Graph/ListGraph.class" afterDir="false" />
@@ -10,8 +9,6 @@
       <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/Graph/MatrixGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/Graph/MatrixGraph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/Graph/VNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/Graph/VNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/top/neusoftware/Graph/WriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/top/neusoftware/Graph/WriteFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/neusoftware/Graph/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/neusoftware/Graph/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/top/neusoftware/Graph/MatrixGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/top/neusoftware/Graph/MatrixGraph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -29,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="160">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -48,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/MatrixGraph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -105,33 +102,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -193,17 +170,18 @@
       <workItem from="1556955386759" duration="83000" />
       <workItem from="1556955498182" duration="373000" />
       <workItem from="1556956190763" duration="1258000" />
+      <workItem from="1579053873946" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3423000" />
+    <option name="totallyTimeSpent" value="3446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24398625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24742268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -245,17 +223,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/GenerateHTML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/ENode.java">
+    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -269,14 +240,21 @@
     <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/MatrixGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/GenerateHTML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/top/neusoftware/Graph/ENode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>

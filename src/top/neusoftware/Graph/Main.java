@@ -1,10 +1,20 @@
 package top.neusoftware.Graph;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
-		String[] nodes= {"北京","上海","台北","泰州","宁波"};
+		Scanner sc=new Scanner(System.in);
+		System.out.println("输入城市数量和路径数量");
+		int cityNum=sc.nextInt(),pathNum=sc.nextInt();
+		System.out.println("请输入所有城市名，以空格隔开");
+		String[] nodes=new String[cityNum];
+		for(int i=0;i<cityNum;i++) {
+			nodes[i]=sc.next();
+		}
+		//String[] nodes= {"北京","上海","台北","泰州","宁波"};
 		int[][] m=new int[nodes.length][nodes.length];
 		for(int i=0;i<m.length;i++) {
 			for(int j=0;j<m[i].length;j++) {
@@ -16,6 +26,8 @@ public class Main {
 				}
 			}
 		}
+		System.out.println("请输入所有路径信息，格式：起始城市编号 目的地城市编号 路径长度");
+		
 		m[0][1]=1213;
 		m[1][4]=200;
 		m[1][2]=900;
